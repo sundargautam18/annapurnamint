@@ -69,8 +69,8 @@
     ]
   },
   "logo": {
-    "light": "/images/emailing.jpg",
-    "dark": "/images/emailing.jpg"
+    "light": "https://annapurnaart.com/header_logo.png",
+    "dark": "https://annapurnaart.com/header_logo.png"
   },
   "navbar": {
     "links": [],

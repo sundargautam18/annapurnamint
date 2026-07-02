@@ -144,6 +144,47 @@ body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] svg {
 }
 
 img.nav-logo {
-  max-width: 220px;
-  height: auto;
+  height: 2.5rem;
+  width: auto;
+  max-width: none;
+}
+
+/* Hide the left sidebar and reduce the top navbar to just the logo,
+   so page content fills the full width of the screen */
+#sidebar-content {
+  display: none !important;
+}
+
+#navbar .nav-tabs,
+#navbar nav[aria-label='Main'] {
+  display: none !important;
+}
+
+/* On smaller screens, also hide the mobile search icon, the "more actions"
+   dots menu, and the hamburger row (it only opens the sidebar, which is hidden) */
+#navbar button[aria-label='Open search'],
+#navbar button[aria-label='More actions'],
+#navbar button[class*='text-left'] {
+  display: none !important;
+}
+
+/* The layout below the navbar reserves space for a second mobile-only row
+   (the hamburger menu) that we hide above; without this, it leaves a blank
+   gap between the navbar and the page content on small screens */
+:root {
+  --mintlify-slot-header-height: 3.5rem !important;
+}
+
+/* Center the logo in the navbar now that the tabs/button are gone */
+#navbar a[data-slot='context-menu-trigger'] {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#content-container {
+  margin-left: 0 !important;
+}
+
+#content-area {
+  max-width: 100% !important;
 }
